@@ -26,6 +26,11 @@ const messageRoutes = require('./routes/MessageRoutes');
 
 const MessageSchema = require('./models/Message');
 
+
+const citiesRoutes = require('./lib-fs/readFile');
+const departamentsRoutes = require('./lib-fs/departamentsFile');
+
+
 //Metodo [GET, POST, PUT, PATCH, DELETE]
 // Nombre del servicio [/]
 router.get('/', (req, res) => {
@@ -72,6 +77,8 @@ app.use('/uploads', express.static('uploads'));
 app.use('/', userRoutes)
 app.use('/', houseRoutes)
 app.use('/', messageRoutes)
+app.use('/', citiesRoutes)
+app.use('/',departamentsRoutes)
 
 /** Ejecucion del servidor */
 http.listen(port, () => {
