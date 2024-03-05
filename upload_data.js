@@ -17,9 +17,28 @@ const data = xlsx.utils.sheet_to_json(workbook.Sheets[sheet_list[0]]);
 
 // Recorre los datos y hashea las contraseñas antes de insertar en la base de datos
 for (const user of data) {
+    user.email = user.email.trim().toLowerCase(); // Elimina espacios en blanco al inicio y al final y convierte el email a minúsculas
     const hashedPassword = bcrypt.hashSync(user.password, 10); // Hash de la contraseña usando bcrypt
     user.password = hashedPassword; // Reemplaza la contraseña original por la hasheada
+    UserSchema({
+        name: user.name,
+        lastname: user.lastname,
+        email: user.email,
+        id: user.id,
+        password: user.password,
+    }).save().then((result)=>{
+        console.log("usuario subido:", user.name);
+    }).catch((err)=>{
+        console.log("Error al subir usuario", user.name);  
+    })
+
 }
+
+
+
+
+
+
 
 // Inserta los datos en la base de datos usando el modelo UserSchema
 UserSchema.insertMany(data).then(() => {
