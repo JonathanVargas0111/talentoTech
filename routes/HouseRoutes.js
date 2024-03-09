@@ -1,15 +1,15 @@
 const express = require('express');
 const router = express.Router();
-const homeController = require('../controllers/HouseController');
+const houseController = require('../controllers/HouseController');
 const uploadFile = require('../utils/fileUpload');
 
 
-router.get('/home', homeController.getHouses);
-router.get('/home/:code', homeController.getHouseByCode); 
-router.post('/home', homeController.createHouse);
-router.delete('/home/:code', homeController.deleteHouse);
-router.patch('/home/:code', homeController.updateHouse);
-router.patch('/upload/:code/home',uploadFile, homeController.uploadPhoto);
+router.get('/house', houseController.getHouses);
+router.get('/house/:code', houseController.getHouseByCode); 
+router.post('/house', houseController.createHouse);
+router.delete('/house/:code', houseController.deleteHouse);
+router.patch('/house/:code', houseController.updateHouse);
+router.patch('/upload/:code/house',uploadFile, houseController.uploadPhoto);
 
 
 /* //Configuracion de la libreria multer
