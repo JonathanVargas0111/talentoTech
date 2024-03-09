@@ -1,4 +1,4 @@
-![alt text](uploads/img-express-node.webp)
+![alt text]([uploads/img-express-node.webp](https://cdn.hashnode.com/res/hashnode/image/upload/v1697014268170/c0eed0a0-3272-4cd3-8a8b-348f4b9147f0.webp?w=1600&h=840&fit=crop&crop=entropy&auto=compress,format&format=webp))
 # <span style="color:#0ea5e9">SecureNodeAuthApp</span>
 
 Este repositorio contiene el código fuente de una aplicación web desarrollada con Node.js, Express y MongoDB, centrada en la autenticación segura de usuarios.
