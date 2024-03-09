@@ -34,15 +34,11 @@ for (const user of data) {
 
 }
 
-
-
-
-
-
-
+/* 
 // Inserta los datos en la base de datos usando el modelo UserSchema
 UserSchema.insertMany(data).then(() => {
     console.log("Datos insertados correctamente"); // Muestra un mensaje si la inserción es exitosa
 }).catch((err) => {
     console.error("Error al insertar los datos:", err); // Muestra un mensaje de error si la inserción falla
 });
+ */
