@@ -35,10 +35,6 @@ Desarrollado en telentoTech
 - chai
 - jest
 
-Este README proporciona instrucciones básicas para clonar, instalar y ejecutar la aplicación, así como información sobre las tecnologías utilizadas y cómo configurar el entorno. Siéntete libre de modificarlo según sea necesario para adaptarlo a tus propios proyectos.
-
-
-
 ## <span style="color:#0ea5e9">Instalación</span>
 
 
@@ -46,6 +42,19 @@ Este README proporciona instrucciones básicas para clonar, instalar y ejecutar 
 2. Instala las dependencias: `npm install`
 3. Configura las variables de entorno creando un archivo `.env` basado en el archivo `.env.example`.
 4. Inicia la aplicación: `npm start`
+
+## <span style="color:#0ea5e9">Ejecutar Pruebas</span> 
+
+##### <span style="color:#38bdf8">Ejecutar Todas las Pruebas</span> 
+
+`npx jest`
+
+##### <span style="color:#38bdf8">Ejecutar Pruebas Específicas</span> 
+
+`npx jest user.test.js`
+
+`npx jest house.test.js`
+
 
 
 ## <span style="color:#0ea5e9">Licencia</span>
