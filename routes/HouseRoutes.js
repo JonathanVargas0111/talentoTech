@@ -9,7 +9,7 @@ router.get('/house/:code', houseController.getHouseByCode);
 router.post('/house', houseController.createHouse);
 router.delete('/house/:code', houseController.deleteHouse);
 router.patch('/house/:code', houseController.updateHouse);
-router.patch('/upload/:code/house',uploadFile, houseController.uploadPhoto);
+router.patch('/upload/:code/house',uploadFile, houseController.uploadPhoto); 
 
 
 /* //Configuracion de la libreria multer
