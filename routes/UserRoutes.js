@@ -51,16 +51,23 @@ router.post('/user', async (req, res) => {
 
 
 
-router.patch('/user/:id', userController.validateToken, (req, res) => {
+router.patch('/user/:id', userController.validateToken,async (req, res) => {
     //Actualizar un usuario
     // Cuando viene por la url del servicio web params
     var id = req.params.id
+
+    let hashedPassword;
+    if(req.body.password){
+        hashedPassword = await bcrypt.hash(req.body.password, 10)
+        console.log("cambio");
+    }
     
     // Cuando viene por el body se usa body
     var updateUser = {
         name: req.body.name,
         lastname: req.body.lastname,
         email: req.body.email,
+        password: hashedPassword,
         id: req.body.id
     }
 
