@@ -101,6 +101,7 @@ const uploadPhoto = async (req, res) => {
 
 
 async function updateHouse(req, res) {
+    console.log("llego a updateHouse");
     try {
         const code = req.params.code;
 
